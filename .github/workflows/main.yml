@@ -16,7 +16,7 @@ on:
 
 jobs:
 
-  # Job 1: VerificaÃ§Ãµes bÃ¡sicas
+  # Job 1: Verificações basicas
 
   verificacoes-basicas:
 
@@ -24,7 +24,7 @@ jobs:
 
     steps:
 
-    - name: 1. Baixando o cÃ³digo do repositÃ³rio
+    - name: 1. Baixando o coigo do repositorio
 
       uses: actions/checkout@v4      
 
@@ -46,7 +46,7 @@ jobs:
 
         else
 
-          echo "app.js nÃ£o encontrado"
+          echo "app.js nao encontrado"
 
           exit 1
 
@@ -60,29 +60,29 @@ jobs:
 
         node-version: '18'
 
-    - name: 4. Executando a aplicaÃ§Ã£o
+    - name: 4. Executando a aplicacao
 
       run: |
 
-        echo "Iniciando a aplicaÃ§Ã£o..."
+        echo "Iniciando a aplicacao..."
 
         node app.js
 
-        echo "AplicaÃ§Ã£o executada com sucesso!"        
+        echo "Aplicacao executada com sucesso!"        
 
     - name: 5. Mensagem de sucesso
 
       run: |
 
-        echo "ParabÃ©ns! Seu primeiro pipeline de CI estÃ¡ funcionando!"
+        echo "Parabens! Seu primeiro pipeline de CI esta funcionando!"
 
-        echo "EstatÃ­sticas da execuÃ§Ã£o:"
+        echo "Estatisticas da execucao:"
 
-        echo "   - RepositÃ³rio: ${{ github.repository }}"
+        echo "   - Reposiorio: ${{ github.repository }}"
 
         echo "   - Branch: ${{ github.ref_name }}"
 
         echo "   - Commit: ${{ github.sha }}"
 
         echo "   - Autor: ${{ github.actor }}"
-----------------
+
